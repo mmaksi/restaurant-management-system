@@ -18,16 +18,8 @@ export async function fetchRestaurants(): Promise<Restaurant[]> {
   const restaurantList =
     adminRestaurants
       ?.map((ar) => {
-        const restaurant = ar.restaurants as unknown as {
-          id: string;
-          name: string;
-          address: string;
-          city: string;
-          phone: string;
-          created_at: Date | string;
-          updated_at: Date | string;
-        };
-        return restaurant ? restaurant : null;
+        const restaurant = ar.restaurants as unknown as Restaurant | null;
+        return restaurant ?? null;
       })
       .filter((r): r is Restaurant => r !== null) || [];
 

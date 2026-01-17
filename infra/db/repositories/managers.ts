@@ -19,11 +19,7 @@ export class ManagersRepository {
 
   async createManager(
     restaurantId: string,
-    managerData: InsertProfileData & {
-      first_name: string | null;
-      last_name: string | null;
-      email: string | null;
-    }
+    managerData: Omit<InsertProfileData, 'id'>
   ): Promise<
     Tables<'restaurant_managers'> & {
       first_name: string | null;

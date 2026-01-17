@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Manager } from '@/lib/helpers/react-queries';
+import type { Manager } from '@/lib/types';
 import { Edit, Trash2, Mail, Building2 } from 'lucide-react';
 
 interface ManagerCardProps {

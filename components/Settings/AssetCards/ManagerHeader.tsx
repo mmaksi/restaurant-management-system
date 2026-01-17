@@ -12,7 +12,7 @@ type Manager = {
   last_name: string | null;
   signup_token: string | null;
   updated_at: string | null;
-  user_id: string | null;
+  user_id?: string | null;
 };
 
 interface ManagerHeaderProps {

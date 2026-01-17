@@ -9,6 +9,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
+  SelectValue,
 } from '@/components/ui/select';
 
 export default function RestaurantSelector() {
@@ -76,20 +77,22 @@ export default function RestaurantSelector() {
 
   return (
     <Select value={selectedRestaurant.id} onValueChange={setSelectedRestaurant}>
-      <SelectTrigger className="w-auto min-w-[200px] bg-white border-slate-200 rounded-lg px-4 py-2 h-auto hover:bg-slate-50 transition-colors shadow-sm">
-        <div className="flex items-center space-x-3">
-          <div className="p-2 bg-blue-100 rounded-lg">
-            <Store className="w-5 h-5 text-blue-600" />
+      <SelectTrigger className="w-auto min-w-[240px] border-slate-200 rounded-lg px-4 py-6 h-auto hover:bg-slate-50 transition-colors shadow-sm">
+        <SelectValue asChild>
+          <div className="flex items-center space-x-3">
+            <div className="p-2 bg-blue-100 rounded-lg">
+              <Store className="w-5 h-5 text-blue-600" />
+            </div>
+            <div className="text-left">
+              <p className="text-sm font-medium text-slate-900">
+                {selectedRestaurant.name}
+              </p>
+              <p className="text-xs text-slate-500">{selectedRestaurant.city}</p>
+            </div>
           </div>
-          <div className="text-left">
-            <p className="text-sm font-medium text-slate-900">
-              {selectedRestaurant.name}
-            </p>
-            <p className="text-xs text-slate-500">{selectedRestaurant.city}</p>
-          </div>
-        </div>
+        </SelectValue>
       </SelectTrigger>
-      <SelectContent className="w-80">
+      <SelectContent className="w-80 mt-16">
         {restaurants.map((restaurant) => (
           <SelectItem
             key={restaurant.id}

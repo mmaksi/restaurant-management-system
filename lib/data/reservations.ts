@@ -15,7 +15,7 @@ import {
 // In-memory storage for demo data (simulating database)
 let floors: Floor[] = JSON.parse(JSON.stringify(DEMO_FLOORS));
 let reservations: Reservation[] = JSON.parse(JSON.stringify(DEMO_RESERVATIONS));
-let customLayouts: Map<string, TableLayout> = new Map();
+const customLayouts: Map<string, TableLayout> = new Map();
 
 /**
  * Get all floors for a restaurant

@@ -8,11 +8,7 @@ const managersRepository = new ManagersRepository(databaseClient);
 
 export async function httpCreateManager(
   restaurantId: string,
-  managerData: InsertProfileData & {
-    first_name: string | null;
-    last_name: string | null;
-    email: string | null;
-  }
+  managerData: Omit<InsertProfileData, 'id'>
 ) {
   return managersRepository.createManager(restaurantId, managerData);
 }

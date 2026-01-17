@@ -3,11 +3,13 @@ import { Restaurant } from '../types/restaurant';
 export const demoRestaurants: Restaurant[] = [
   {
     id: 'rest-001',
-    name: 'La Bella Vista',
+    name: 'La Cha Cha',
     address: '123 Main Street',
-    city: 'New York',
+    city: 'Koblenz, Germany',
     phone: '+1 (555) 123-4567',
     type: 'fine-dining',
+    created_at: null,
+    updated_at: null,
   },
   {
     id: 'rest-002',
@@ -16,6 +18,8 @@ export const demoRestaurants: Restaurant[] = [
     city: 'New York',
     phone: '+1 (555) 234-5678',
     type: 'casual',
+    created_at: null,
+    updated_at: null,
   },
   {
     id: 'rest-003',
@@ -24,6 +28,8 @@ export const demoRestaurants: Restaurant[] = [
     city: 'Brooklyn',
     phone: '+1 (555) 345-6789',
     type: 'cafe',
+    created_at: null,
+    updated_at: null,
   },
   {
     id: 'rest-004',
@@ -32,5 +38,7 @@ export const demoRestaurants: Restaurant[] = [
     city: 'Queens',
     phone: '+1 (555) 456-7890',
     type: 'fast-food',
+    created_at: null,
+    updated_at: null,
   },
 ];

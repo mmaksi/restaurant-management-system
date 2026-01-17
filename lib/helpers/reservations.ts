@@ -1,4 +1,4 @@
-import { RestaurantTable, Reservation, Floor } from '@/lib/types';
+import { RestaurantTable, Reservation } from '@/lib/types';
 import { DEFAULT_RESERVATION_DURATION } from '@/lib/constants';
 
 /**

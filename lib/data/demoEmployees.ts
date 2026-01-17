@@ -1,4 +1,3 @@
-import { Employee } from '@/lib/types';
 import { addDays, startOfWeek, format } from 'date-fns';
 import { EMPLOYEE_ROLES, EMPLOYMENT_CONTRACT_FILTER } from '@/lib/constants';
 
@@ -10,7 +9,7 @@ const getNextWeekDate = (dayOffset: number) => {
   return format(addDays(nextWeekStart, dayOffset), 'yyyy-MM-dd');
 };
 
-export const demoEmployees: Employee[] = [
+export const demoEmployees = [
   {
     id: 'emp-001',
     firstName: 'Sarah',
